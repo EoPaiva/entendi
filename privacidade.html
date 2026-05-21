@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Política de Privacidade da extensão Entendi. — o que coletamos, armazenamos e o que NÃO fazemos.">
+<meta name="robots" content="index, follow">
+<title>Política de Privacidade — Entendi.</title>
+<link rel="canonical" href="">
+<style>
+  :root {
+    --bg-base: #0a0d14;
+    --bg-surface: #0e1117;
+    --bg-card: #161b27;
+    --bg-elevated: #1e2535;
+    --border-subtle: #252d3d;
+    --color-blue: #3b82f6;
+    --color-blue-dim: #1d4ed8;
+    --color-green: #22c55e;
+    --color-amber: #f59e0b;
+    --text-primary: #e8edf5;
+    --text-secondary: #b8c2d1;
+    --text-muted: #7d8a9e;
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #22c55e 100%);
+    --glow-blue: 0 0 24px rgba(59, 130, 246, 0.30);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    line-height: 1.65;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 12px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 40px 0 12px;
+    color: var(--text-primary);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  h3 {
+    font-size: 16px;
+    margin: 24px 0 8px;
+    color: var(--color-blue);
+  }
+  p { margin: 12px 0; color: var(--text-secondary); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; color: var(--text-secondary); }
+  strong { color: var(--text-primary); font-weight: 600; }
+  a { color: var(--color-blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    color: var(--text-primary);
+  }
+  .tldr {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(34, 197, 94, 0.10));
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0 40px;
+    box-shadow: var(--glow-blue);
+  }
+  .tldr h2 {
+    margin-top: 0;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-blue);
+  }
+  .tldr ul { margin: 8px 0 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  table th, table td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  table th {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 13px;
+  }
+  table td { color: var(--text-secondary); }
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 40px 0;
+  }
+  .nav-top {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .nav-top a {
+    padding: 6px 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    color: var(--text-secondary);
+  }
+  .nav-top a:hover {
+    color: var(--text-primary);
+    border-color: var(--color-blue);
+    text-decoration: none;
+  }
+  .nav-top a.atual {
+    border-color: var(--color-blue);
+    color: var(--color-blue);
+    background: rgba(59, 130, 246, 0.10);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="nav-top">
+    <a href="privacidade.html" class="atual">🔒 Privacidade</a>
+    <a href="termos.html">📜 Termos de Uso</a>
+  </div>
+
+  <header>
+    <span class="badge">Entendi. — Burocracia simples</span>
+    <h1>Política de Privacidade</h1>
+    <p class="meta">Última atualização: <strong>20 de maio de 2026</strong></p>
+  </header>
+
+  <p>A extensão <strong>Entendi. — Burocracia em português de gente</strong> foi projetada com privacidade como prioridade máxima. Este documento explica o que coletamos, o que armazenamos, o que enviamos para servidores externos e o que <strong>NÃO</strong> fazemos. Esta política observa a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</p>
+
+  <div class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li><strong>Tudo fica no seu navegador</strong> (<code>chrome.storage.local</code>). Nenhum dado é enviado para servidores próprios — porque a uPaiva <strong>não tem servidor próprio</strong> pro Entendi.</li>
+      <li>A extensão <strong>nunca lê</strong> o que você digita nos formulários do governo — apenas o rótulo do campo (ex: "NIT/PIS/PASEP") pra mostrar o tooltip.</li>
+      <li>Sua <strong>chave de API</strong> (Gemini ou Claude) fica salva apenas localmente no seu navegador.</li>
+      <li>Suas <strong>perguntas no chat</strong> vão direto do seu navegador para o Google (Gemini) ou Anthropic (Claude) — sem passar por nenhum servidor intermediário.</li>
+      <li>Você pode apagar todos os dados a qualquer momento removendo a extensão ou clicando em "Remover" no popup.</li>
+    </ul>
+  </div>
+
+  <h2>O que a extensão coleta e armazena</h2>
+  <p>Tudo abaixo fica <strong>apenas no seu navegador</strong>, em <code>chrome.storage.local</code>. Nada é enviado para servidores externos sem que esteja descrito na seção "Comunicação com servidores externos" abaixo.</p>
+
+  <h3>Dados de uso da extensão</h3>
+  <ul>
+    <li><strong>Histórico de portais visitados</strong> — Últimos 10 processos do governo onde o painel foi exibido (ID do processo, título, portal, URL, data/hora). Usado apenas pelo popup mostrar atalhos recentes.</li>
+    <li><strong>Configurações de comportamento</strong> — Toggles de painel automático, tooltips ativos e tradução de erros (somente <code>true</code>/<code>false</code>).</li>
+    <li><strong>Estado de onboarding</strong> — Lista de processos onde o painel auto-abriu pela primeira vez (pra não reabrir sozinho na mesma página).</li>
+  </ul>
+
+  <h3>Chave de IA (BYOK)</h3>
+  <ul>
+    <li><strong>Provedor escolhido</strong> (Gemini ou Claude).</li>
+    <li><strong>Chave de API do provedor</strong> — armazenada localmente em <code>chrome.storage.local</code>. Recomendamos restringir a chave por uso/IP no painel do provedor (Google AI Studio ou Anthropic Console) como camada extra de segurança.</li>
+  </ul>
+
+  <h3>Dados que a extensão LÊ da página, mas NUNCA armazena</h3>
+  <ul>
+    <li>URL atual, título da página, conteúdo de texto visível — usados localmente no seu navegador para detectar qual processo do governo você está fazendo.</li>
+    <li>Rótulo de campos de formulário (<code>&lt;label&gt;</code>, <code>aria-label</code>) — usado pra mostrar tooltips contextuais.</li>
+    <li>Texto de mensagens de erro do sistema do governo — usado pra mostrar a tradução em português simples.</li>
+  </ul>
+  <p><strong>Essa leitura acontece em tempo real, dentro do seu navegador, e o conteúdo lido NUNCA é armazenado nem enviado pra nada.</strong></p>
+
+  <h2>O que a extensão NÃO coleta</h2>
+  <ul>
+    <li><strong>CPF, RG, senhas, dados bancários</strong> — nunca lemos campos de formulário com dados pessoais.</li>
+    <li><strong>Conteúdo digitado por você</strong> — nem rascunho de declaração, nem valor de salário, nem qualquer informação que você preenche.</li>
+    <li><strong>Cookies dos sites do governo</strong> — não lemos cookies de meu.inss.gov.br, gov.br, etc.</li>
+    <li><strong>Histórico de navegação</strong> — a extensão só roda nos portais cobertos (INSS, Receita, DETRAN, gov.br, Caixa/FGTS).</li>
+    <li><strong>Sua identidade pessoal</strong> — não temos cadastro, não temos conta, não temos servidor.</li>
+    <li><strong>Telemetria, analytics, métricas de uso</strong> — nenhum Google Analytics, Mixpanel, Sentry ou similar.</li>
+  </ul>
+
+  <h2>Comunicação com servidores externos</h2>
+  <p>A extensão se comunica com <strong>apenas dois endpoints externos</strong>, e somente quando você clica em "Perguntar" no campo de dúvida:</p>
+
+  <h3>1. Google AI Studio (Gemini) — quando o usuário escolhe esse provedor</h3>
+  <p>URL: <code>https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent</code></p>
+  <p>Cada requisição contém:</p>
+  <ul>
+    <li>Sua <strong>chave de API</strong> (necessária pro Google te identificar como cliente deles)</li>
+    <li>Sua <strong>pergunta</strong> digitada</li>
+    <li>O <strong>título do processo</strong> detectado (ex: "INSS / Recurso de Benefício Negado") — pra dar contexto à IA</li>
+    <li>O <strong>prompt de sistema</strong> padrão (instrui a IA a responder em português simples)</li>
+  </ul>
+  <p><strong>O Google NÃO recebe:</strong></p>
+  <ul>
+    <li>Sua URL completa</li>
+    <li>Conteúdo do formulário ou da página</li>
+    <li>CPF, RG ou qualquer dado pessoal</li>
+    <li>Histórico de outras perguntas</li>
+  </ul>
+  <p>Política de privacidade do Google AI: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+
+  <h3>2. Anthropic (Claude) — quando o usuário escolhe esse provedor</h3>
+  <p>URL: <code>https://api.anthropic.com/v1/messages</code></p>
+  <p>Mesma estrutura da seção anterior, com sua chave da Anthropic (<code>sk-ant-...</code>).</p>
+  <p>Política de privacidade da Anthropic: <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a></p>
+
+  <h3>Nenhum outro endpoint</h3>
+  <p>A extensão <strong>não se comunica com servidores da uPaiva</strong> — não existe backend próprio do Entendi. Não há cadastro, login, telemetria, ping, atualização remota, nada.</p>
+
+  <h2>Cookies</h2>
+  <p>A extensão <strong>não lê, não escreve e não acessa cookies de nenhum site</strong>. Os portais do governo continuam funcionando com seus próprios cookies, sem interferência da extensão.</p>
+
+  <h2>Não somos afiliados a nenhum órgão público</h2>
+  <p>A extensão Entendi. <strong>não é afiliada, endossada, patrocinada ou autorizada</strong> por:</p>
+  <ul>
+    <li>INSS — Instituto Nacional do Seguro Social</li>
+    <li>Receita Federal do Brasil</li>
+    <li>DETRAN (de qualquer estado)</li>
+    <li>Caixa Econômica Federal</li>
+    <li>Governo Federal, estados ou municípios</li>
+    <li>Meta, Google, Anthropic ou qualquer outra empresa privada</li>
+  </ul>
+  <p>Esta extensão é fornecida "como está" (as-is), sem garantias. As informações exibidas são curadas pela equipe da uPaiva com base em fontes públicas e podem estar desatualizadas — em caso de dúvida, sempre confirme nos canais oficiais (<strong>135</strong> para INSS, <strong>146</strong> para Receita, ou no DETRAN local).</p>
+
+  <h2>LGPD — Lei Geral de Proteção de Dados</h2>
+  <p>Para fins da LGPD (Lei nº 13.709/2018):</p>
+
+  <h3>Controlador de dados</h3>
+  <p>Como nenhum dado pessoal é coletado pela extensão, <strong>não há "controlador" no sentido da LGPD</strong>. Você é o único agente que decide o que digita e o que envia através do chat.</p>
+
+  <h3>Base legal</h3>
+  <p>Como não há tratamento de dados pessoais por parte da extensão, <strong>nenhuma base legal precisa ser invocada</strong>. Qualquer dado que sai do seu navegador (sua pergunta + título do processo) vai direto pro provedor de IA escolhido por você (Gemini ou Claude), com base no seu consentimento explícito ao clicar em "Perguntar".</p>
+
+  <h3>Seus direitos</h3>
+  <p>Você tem todos os direitos garantidos pelos arts. 17 a 22 da LGPD:</p>
+  <ul>
+    <li><strong>Acesso aos seus dados:</strong> clique no popup do Entendi. — você vê o histórico de portais visitados e o estado da chave de API.</li>
+    <li><strong>Correção:</strong> você pode atualizar sua chave de API ou apagar a anterior a qualquer momento.</li>
+    <li><strong>Eliminação:</strong> Remover a extensão (<code>chrome://extensions</code> → "Remover") apaga TUDO instantaneamente. Não há nada na nuvem pra apagar.</li>
+    <li><strong>Portabilidade:</strong> seu histórico é uma lista simples no <code>chrome.storage.local</code> — não há lock-in.</li>
+  </ul>
+
+  <h2>Permissões pedidas no manifesto</h2>
+  <table>
+    <thead>
+      <tr><th>Permissão</th><th>Para quê</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>storage</code></td><td>Salvar sua chave de API e configurações localmente</td></tr>
+      <tr><td><code>activeTab</code></td><td>Ler URL + conteúdo da aba ativa quando você está num portal coberto</td></tr>
+      <tr><td><code>host_permissions</code></td><td>Lista de URLs do governo + APIs de IA — injetar o painel nos sites cobertos + requisitar Gemini/Anthropic</td></tr>
+    </tbody>
+  </table>
+  <p>A extensão <strong>não pede</strong>:</p>
+  <ul>
+    <li><code>tabs</code> (ver todas as suas abas)</li>
+    <li><code>cookies</code></li>
+    <li><code>webRequest</code> (interceptar tráfego)</li>
+    <li><code>history</code> (histórico de navegação)</li>
+  </ul>
+
+  <h2>Alterações desta política</h2>
+  <p>Esta política pode ser atualizada conforme a extensão evolui. A data no topo indica a última revisão. Mudanças materiais (ex: começarmos a coletar telemetria) serão anunciadas em um banner no popup antes de entrar em vigor.</p>
+
+  <footer>
+    Para dúvidas ou solicitações: <a href="https://upaiva.dev" target="_blank" rel="noopener">upaiva.dev</a><br/>
+    Versão deste documento: <strong>1.0.0</strong>
+  </footer>
+
+</div>
+</body>
+</html>

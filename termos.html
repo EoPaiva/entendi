@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Termos de Uso da extensão Entendi. — direitos, responsabilidades e isenções.">
+<meta name="robots" content="index, follow">
+<title>Termos de Uso — Entendi.</title>
+<link rel="canonical" href="">
+<style>
+  :root {
+    --bg-base: #0a0d14;
+    --bg-surface: #0e1117;
+    --bg-card: #161b27;
+    --bg-elevated: #1e2535;
+    --border-subtle: #252d3d;
+    --color-blue: #3b82f6;
+    --color-blue-dim: #1d4ed8;
+    --color-green: #22c55e;
+    --color-amber: #f59e0b;
+    --color-danger: #ef4444;
+    --text-primary: #e8edf5;
+    --text-secondary: #b8c2d1;
+    --text-muted: #7d8a9e;
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #22c55e 100%);
+    --glow-blue: 0 0 24px rgba(59, 130, 246, 0.30);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    line-height: 1.65;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 12px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 40px 0 12px;
+    color: var(--text-primary);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  h3 {
+    font-size: 16px;
+    margin: 24px 0 8px;
+    color: var(--color-blue);
+  }
+  p { margin: 12px 0; color: var(--text-secondary); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; color: var(--text-secondary); }
+  strong { color: var(--text-primary); font-weight: 600; }
+  a { color: var(--color-blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    color: var(--text-primary);
+  }
+  .resumo {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(34, 197, 94, 0.10));
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0 40px;
+    box-shadow: var(--glow-blue);
+  }
+  .resumo h2 {
+    margin-top: 0;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-blue);
+  }
+  .resumo ol { margin: 8px 0 0; padding-left: 24px; }
+  .aviso {
+    background: rgba(245, 158, 11, 0.10);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .aviso strong { color: var(--color-amber); }
+  .secao-isencao {
+    background: rgba(239, 68, 68, 0.06);
+    border: 1px solid rgba(239, 68, 68, 0.20);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 40px 0;
+  }
+  .nav-top {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .nav-top a {
+    padding: 6px 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    color: var(--text-secondary);
+  }
+  .nav-top a:hover {
+    color: var(--text-primary);
+    border-color: var(--color-blue);
+    text-decoration: none;
+  }
+  .nav-top a.atual {
+    border-color: var(--color-blue);
+    color: var(--color-blue);
+    background: rgba(59, 130, 246, 0.10);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="nav-top">
+    <a href="privacidade.html">🔒 Privacidade</a>
+    <a href="termos.html" class="atual">📜 Termos de Uso</a>
+  </div>
+
+  <header>
+    <span class="badge">Entendi. — Burocracia simples</span>
+    <h1>Termos de Uso</h1>
+    <p class="meta">Versão <strong>1.0.0</strong> · Última atualização: <strong>20 de maio de 2026</strong></p>
+  </header>
+
+  <p>Estes Termos de Uso ("Termos") regem o uso da extensão <strong>Entendi. — Burocracia em português de gente</strong> ("Entendi.", "extensão", ou "serviço"), desenvolvida e mantida pela <strong>uPaiva</strong>. Ao instalar, ativar ou usar a extensão, você ("usuário") concorda integralmente com estes Termos.</p>
+  <p>Se você não concorda com algum dos pontos abaixo, <strong>não use a extensão</strong>.</p>
+
+  <div class="resumo">
+    <h2>Resumo executivo</h2>
+    <ol>
+      <li>A extensão te ajuda a entender sites do governo, mas <strong>não substitui orientação oficial nem profissional</strong>.</li>
+      <li><strong>Nada do que você faz é enviado pra gente</strong> — não temos servidor.</li>
+      <li>Você usa <strong>sua própria chave</strong> de IA (Google ou Anthropic) — paga ou grátis, é sua relação com eles.</li>
+      <li>A gente <strong>não garante nada</strong> — extensão é "como está", sem indenização possível.</li>
+      <li>Pra parar de usar, <strong>remova a extensão</strong> — apaga tudo instantaneamente.</li>
+    </ol>
+  </div>
+
+  <h2>1. O que a extensão faz</h2>
+  <p>A Entendi. é uma camada de tradução que aparece sobre páginas oficiais do governo brasileiro (INSS, Receita Federal, DETRAN, Caixa/FGTS, gov.br) e exibe, em linguagem simples:</p>
+  <ul>
+    <li>O que a página é (descrição do processo)</li>
+    <li>Quais documentos são necessários</li>
+    <li>Passos para completar o processo</li>
+    <li>Modalidade (online/presencial/ambos), tempo estimado</li>
+    <li>Direitos do cidadão naquele processo</li>
+    <li>Alertas e armadilhas comuns</li>
+    <li>Tooltips contextuais em campos de formulário</li>
+    <li>Tradução de mensagens de erro do sistema</li>
+    <li>Chat com IA (Gemini ou Claude — sua chave) para dúvidas livres</li>
+  </ul>
+
+  <h2>2. Natureza do serviço — informativo, não jurídico</h2>
+  <p><strong>A Entendi. fornece informações de caráter informativo e educacional</strong>, baseadas em fontes públicas, leis e regulamentos brasileiros vigentes. As informações são curadas e revisadas pela equipe da uPaiva, mas:</p>
+  <div class="aviso">
+    <p><strong>(a) Não constituem aconselhamento jurídico, contábil, médico ou previdenciário.</strong> Decisões importantes sobre seus direitos devem ser tomadas com base em fontes oficiais e, quando necessário, com auxílio de profissional habilitado (advogado, contador, médico, defensor público).</p>
+    <p><strong>(b) Podem estar desatualizadas.</strong> Leis, regras, prazos e valores mudam. A data "Atualizado em" no rodapé de cada painel indica a última revisão.</p>
+    <p><strong>(c) Não substituem os canais oficiais.</strong> Para informação definitiva, consulte: <strong>135</strong> (INSS), <strong>146</strong> (Receita), DETRAN do seu estado, ou Caixa pelo <strong>0800 726 0207</strong>.</p>
+    <p><strong>(d) A IA pode errar.</strong> Respostas geradas por Gemini ou Claude são produzidas por modelos estatísticos e podem conter imprecisões. Sempre confirme em fontes oficiais.</p>
+  </div>
+
+  <h2>3. Não afiliação com órgãos públicos</h2>
+  <p>A Entendi. <strong>não é afiliada, endossada, patrocinada, autorizada ou aprovada</strong> por:</p>
+  <ul>
+    <li>INSS — Instituto Nacional do Seguro Social</li>
+    <li>Receita Federal do Brasil</li>
+    <li>DETRAN (de qualquer estado)</li>
+    <li>Caixa Econômica Federal</li>
+    <li>Governo Federal, estados ou municípios</li>
+    <li>Qualquer empresa privada (Google, Anthropic, Meta, etc.)</li>
+  </ul>
+  <p>Os nomes "INSS", "Receita Federal", "DETRAN", "Caixa", "gov.br" e similares são usados apenas para fins descritivos, identificando os portais cobertos pela extensão. Todas as marcas, logos e nomes pertencem a seus respectivos titulares.</p>
+
+  <h2>4. Uso aceitável</h2>
+  <p>Você concorda em:</p>
+  <ul>
+    <li><strong>(a)</strong> Usar a extensão <strong>somente para fins lícitos</strong>, em sites oficiais do governo brasileiro.</li>
+    <li><strong>(b) Não modificar, distribuir, vender ou redistribuir</strong> a extensão ou seu código sem autorização expressa.</li>
+    <li><strong>(c) Não usar a extensão para automatizar ações</strong> nos portais do governo (preenchimento em massa, scraping massivo, etc.).</li>
+    <li><strong>(d) Não tentar contornar limites técnicos</strong> da extensão ou dos provedores de IA.</li>
+    <li><strong>(e) Respeitar os limites de uso da sua chave de IA</strong> com o provedor escolhido. A uPaiva não é responsável por bloqueios na sua chave por uso excessivo.</li>
+  </ul>
+
+  <h2>5. BYOK — Bring Your Own Key</h2>
+  <p>A extensão usa o modelo <strong>BYOK</strong> (Bring Your Own Key) para a funcionalidade de chat com IA. Isso significa:</p>
+  <ul>
+    <li><strong>(a)</strong> Você obtém sua <strong>própria chave de API</strong> diretamente do provedor (Google AI Studio ou Anthropic Console).</li>
+    <li><strong>(b) Você é o único responsável</strong> pelos custos, limites e termos dessa chave junto ao provedor.</li>
+    <li><strong>(c)</strong> A uPaiva <strong>não tem acesso à sua chave</strong>. Ela fica salva apenas no seu navegador.</li>
+    <li><strong>(d)</strong> Você concorda integralmente com os termos do provedor de IA escolhido:
+      <ul>
+        <li>Termos do Google AI: <a href="https://policies.google.com/terms" target="_blank" rel="noopener">policies.google.com/terms</a></li>
+        <li>Termos da Anthropic: <a href="https://www.anthropic.com/legal/consumer-terms" target="_blank" rel="noopener">anthropic.com/legal/consumer-terms</a></li>
+      </ul>
+    </li>
+    <li><strong>(e) Não há fallback</strong> se sua chave expirar, atingir o limite ou for revogada — o chat simplesmente para de funcionar até você atualizar a chave.</li>
+  </ul>
+
+  <h2>6. Privacidade</h2>
+  <p>Veja a <a href="privacidade.html">Política de Privacidade</a> completa.</p>
+  <p>Resumo: <strong>a extensão não coleta nem armazena nenhum dado pessoal seu</strong>. Tudo fica no seu navegador (<code>chrome.storage.local</code>). Não há servidor próprio. Não há telemetria. Não há analytics.</p>
+
+  <h2>7. Isenção de responsabilidade</h2>
+  <div class="secao-isencao">
+    <p>A uPaiva, seus desenvolvedores e colaboradores:</p>
+    <ul>
+      <li><strong>(a)</strong> Fornecem a extensão <strong>"COMO ESTÁ" (as-is)</strong>, sem garantias de qualquer tipo, expressas ou implícitas — incluindo, mas não limitado a: garantias de mercabilidade, adequação a um propósito específico, ou não violação.</li>
+      <li><strong>(b) Não garantem precisão, completude ou atualidade</strong> das informações exibidas. Decisões baseadas no que a extensão mostra são por sua conta e risco.</li>
+      <li><strong>(c) Não se responsabilizam</strong> por:
+        <ul>
+          <li>Decisões erradas que você tomou com base na extensão</li>
+          <li>Prazos perdidos por confiança nas datas mostradas</li>
+          <li>Benefícios negados por seguir orientações genéricas</li>
+          <li>Respostas incorretas da IA (Gemini ou Claude)</li>
+          <li>Custos com sua chave de API (Google ou Anthropic)</li>
+          <li>Indisponibilidade dos portais do governo</li>
+          <li>Falhas no funcionamento da extensão por mudanças nos portais</li>
+          <li>Qualquer dano indireto, incidental, consequente ou punitivo</li>
+        </ul>
+      </li>
+      <li><strong>(d) Não garantem compatibilidade futura</strong> com versões novas do Chrome, dos portais do governo ou dos provedores de IA.</li>
+      <li><strong>(e) Podem descontinuar a extensão</strong> a qualquer momento, sem aviso prévio.</li>
+    </ul>
+  </div>
+
+  <h2>8. Limitação de responsabilidade</h2>
+  <p>Na máxima extensão permitida pela lei brasileira, a responsabilidade total da uPaiva, em qualquer hipótese, <strong>está limitada ao valor pago por você pela extensão</strong> — que, no MVP, é <strong>ZERO</strong> (a extensão é gratuita).</p>
+  <p>Isso significa, em termos práticos: <strong>a uPaiva não pode ser obrigada a te indenizar em valor algum</strong> decorrente do uso ou da impossibilidade de uso da extensão.</p>
+
+  <h2>9. Propriedade intelectual</h2>
+  <ul>
+    <li><strong>(a)</strong> O <strong>código da extensão</strong>, design visual, base de conhecimento curada (textos dos processos), tooltips e traduções de erros são de propriedade da uPaiva ou licenciados a ela.</li>
+    <li><strong>(b)</strong> Você recebe uma <strong>licença gratuita, não exclusiva, não transferível e revogável</strong> para usar a extensão para fins pessoais e não comerciais.</li>
+    <li><strong>(c)</strong> Você <strong>não pode</strong>:
+      <ul>
+        <li>Copiar a base de conhecimento para outro produto</li>
+        <li>Redistribuir a extensão modificada como sua</li>
+        <li>Usar o nome "Entendi." ou marca da uPaiva em produto derivado</li>
+      </ul>
+    </li>
+    <li><strong>(d)</strong> Marcas de terceiros (INSS, Receita Federal, etc.) são propriedade dos respectivos titulares.</li>
+  </ul>
+
+  <h2>10. Alterações nestes Termos</h2>
+  <p>A uPaiva pode atualizar estes Termos a qualquer momento. Mudanças materiais (ex: passar a coletar dados, cobrar pela extensão) serão anunciadas com <strong>30 dias de antecedência</strong> via:</p>
+  <ul>
+    <li>Banner no popup da extensão</li>
+    <li>Atualização da data "Última atualização" no topo</li>
+    <li>Anúncio no GitHub do projeto</li>
+  </ul>
+  <p>O uso continuado da extensão após a entrada em vigor das mudanças configura aceitação dos novos Termos.</p>
+
+  <h2>11. Encerramento</h2>
+  <p>Você pode <strong>deixar de usar a extensão a qualquer momento</strong> removendo-a em <code>chrome://extensions</code> → "Remover". Isso apaga <strong>todos</strong> os dados locais instantaneamente.</p>
+  <p>A uPaiva pode encerrar a oferta da extensão sem aviso prévio. Caso a extensão saia da Chrome Web Store, ela continua funcionando até você desinstalar — mas não receberá mais atualizações.</p>
+
+  <h2>12. Lei aplicável e foro</h2>
+  <p>Estes Termos são regidos pelas leis da <strong>República Federativa do Brasil</strong>. Eventuais disputas serão resolvidas no foro do <strong>domicílio do usuário</strong> (princípio do consumidor — CDC Art. 101).</p>
+
+  <h2>13. Disposições gerais</h2>
+  <ul>
+    <li><strong>(a) Acordo integral.</strong> Estes Termos, junto com a Política de Privacidade, constituem o acordo completo entre você e a uPaiva sobre o uso da extensão.</li>
+    <li><strong>(b) Cláusula independente.</strong> Se qualquer disposição destes Termos for considerada inválida, as demais permanecem em vigor.</li>
+    <li><strong>(c) Sem renúncia.</strong> A falha da uPaiva em fazer valer qualquer disposição destes Termos não significa renúncia a esse direito.</li>
+    <li><strong>(d) Contato.</strong> Para dúvidas sobre estes Termos: <a href="https://upaiva.dev" target="_blank" rel="noopener">upaiva.dev</a></li>
+  </ul>
+
+  <footer>
+    Para dúvidas: <a href="https://upaiva.dev" target="_blank" rel="noopener">upaiva.dev</a><br/>
+    Versão deste documento: <strong>1.0.0</strong>
+  </footer>
+
+</div>
+</body>
+</html>
