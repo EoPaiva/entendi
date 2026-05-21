@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Página de suporte da extensão Entendi. — FAQ, contato, reportar bugs e solicitar exclusão de dados.">
+<meta name="robots" content="index, follow">
+<title>Suporte — Entendi.</title>
+<link rel="canonical" href="">
+<style>
+  :root {
+    --bg-base: #0a0d14;
+    --bg-surface: #0e1117;
+    --bg-card: #161b27;
+    --bg-elevated: #1e2535;
+    --border-subtle: #252d3d;
+    --color-blue: #3b82f6;
+    --color-blue-dim: #1d4ed8;
+    --color-green: #22c55e;
+    --color-amber: #f59e0b;
+    --text-primary: #e8edf5;
+    --text-secondary: #b8c2d1;
+    --text-muted: #7d8a9e;
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #22c55e 100%);
+    --glow-blue: 0 0 24px rgba(59, 130, 246, 0.30);
+    --glow-green: 0 0 24px rgba(34, 197, 94, 0.3);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    line-height: 1.65;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 12px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 40px 0 12px;
+    color: var(--text-primary);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  h3 {
+    font-size: 16px;
+    margin: 24px 0 8px;
+    color: var(--color-blue);
+  }
+  p { margin: 12px 0; color: var(--text-secondary); }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; color: var(--text-secondary); }
+  strong { color: var(--text-primary); font-weight: 600; }
+  a { color: var(--color-blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    color: var(--text-primary);
+  }
+  kbd {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-bottom: 2px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-size: 11px;
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  /* Contact hero card */
+  .contact-card {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(34, 197, 94, 0.08));
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    border-radius: 16px;
+    padding: 32px;
+    margin: 24px 0 40px;
+    box-shadow: var(--glow-blue);
+    text-align: center;
+  }
+  .contact-card h2 {
+    margin: 0 0 8px;
+    border: none;
+    padding: 0;
+    color: var(--text-primary);
+    font-size: 20px;
+  }
+  .contact-card p { margin: 8px 0 16px; }
+  .email-btn {
+    display: inline-block;
+    background: var(--gradient-primary);
+    color: #0a0d14 !important;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none !important;
+    box-shadow: var(--glow-blue);
+    letter-spacing: 0.3px;
+  }
+  .email-btn:hover { transform: translateY(-1px); }
+
+  /* Response time pill */
+  .response-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    color: var(--color-green);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 8px;
+  }
+  .response-pill::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-green);
+    box-shadow: var(--glow-green);
+  }
+
+  /* FAQ */
+  .faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 12px 0;
+  }
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--text-primary);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    color: var(--color-blue);
+    font-size: 20px;
+    font-weight: 700;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  .faq-item[open] summary::after {
+    content: "−";
+  }
+  .faq-item .answer {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .faq-item .answer p:first-child { margin-top: 0; }
+  .faq-item .answer p:last-child { margin-bottom: 0; }
+
+  /* Email template */
+  .email-template {
+    background: var(--bg-card);
+    border: 1px dashed var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+    white-space: pre-wrap;
+    line-height: 1.5;
+  }
+
+  /* Canais rápidos grid */
+  .canais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .canal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .canal-card .title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-blue);
+    margin-bottom: 4px;
+  }
+  .canal-card .body {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  .nav-links {
+    text-align: center;
+    margin-top: 12px;
+  }
+  .nav-links a {
+    margin: 0 12px;
+    font-size: 13px;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 40px 0;
+  }
+  .nav-top {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+  .nav-top a {
+    padding: 6px 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    color: var(--text-secondary);
+  }
+  .nav-top a:hover {
+    color: var(--text-primary);
+    border-color: var(--color-blue);
+    text-decoration: none;
+  }
+  .nav-top a.atual {
+    border-color: var(--color-blue);
+    color: var(--color-blue);
+    background: rgba(59, 130, 246, 0.10);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="nav-top">
+    <a href="privacidade.html">🔒 Privacidade</a>
+    <a href="termos.html">📜 Termos de Uso</a>
+    <a href="suporte.html" class="atual">💬 Suporte</a>
+  </div>
+
+  <header>
+    <span class="badge">Entendi. — Burocracia simples</span>
+    <h1>Suporte</h1>
+    <p class="meta">Tira dúvidas, reporta bugs e solicita exclusão de dados</p>
+  </header>
+
+  <div class="contact-card">
+    <h2>Fale com a gente</h2>
+    <p>Suporte por e-mail. Resposta direta, sem chatbot.</p>
+    <a class="email-btn" href="mailto:suporte@upaiva.dev?subject=Suporte%20Entendi.">suporte@upaiva.dev</a>
+    <div><span class="response-pill">Resposta em até 2 dias úteis</span></div>
+  </div>
+
+  <h2>Canais rápidos</h2>
+  <div class="canais-grid">
+    <div class="canal-card">
+      <div class="title">🐛 Reportar bug</div>
+      <div class="body">Algo quebrou? Mande e-mail com o template do final desta página.</div>
+    </div>
+    <div class="canal-card">
+      <div class="title">💡 Sugerir processo</div>
+      <div class="body">Quer que cubramos um processo novo do governo? Avise!</div>
+    </div>
+    <div class="canal-card">
+      <div class="title">🗑 Excluir dados</div>
+      <div class="body">Como não coletamos nada, remover a extensão já apaga tudo.</div>
+    </div>
+    <div class="canal-card">
+      <div class="title">📜 Documentos legais</div>
+      <div class="body"><a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos</a></div>
+    </div>
+  </div>
+
+  <h2>Perguntas frequentes</h2>
+
+  <details class="faq-item" open>
+    <summary>Como instalo a extensão?</summary>
+    <div class="answer">
+      <p>Pela <strong>Chrome Web Store</strong>: busca por "Entendi." e clica em "Usar no Chrome". O ícone 🏛 azul aparece na barra do navegador.</p>
+      <p>Depois de instalar, abre o popup e configura sua chave de IA (Gemini grátis ou Claude pago) — a página de boas-vindas guia o processo.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>A extensão é gratuita? Tem premium?</summary>
+    <div class="answer">
+      <p><strong>Sim, totalmente gratuita.</strong> Não tem cadastro, login, plano premium, propaganda nem upgrade pago. Open-source, sem custo nenhum no MVP.</p>
+      <p>A única coisa que pode custar dinheiro é se você escolher usar Claude (Anthropic) como provedor de IA — mas isso é a sua relação com a Anthropic, não conosco. Se usar Gemini (Google), tudo é grátis pra sempre.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>A extensão coleta meus dados?</summary>
+    <div class="answer">
+      <p><strong>Não. Nada.</strong> A extensão não tem servidor próprio — então não há pra onde mandar dados.</p>
+      <p>Tudo fica no seu navegador: histórico de portais visitados (últimos 10), configurações (3 toggles), e sua chave de API. Detalhes completos em <a href="privacidade.html">privacidade.html</a>.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>O que é BYOK e como pego uma chave grátis do Gemini?</summary>
+    <div class="answer">
+      <p><strong>BYOK</strong> = "Bring Your Own Key". Você usa sua própria chave de API do provedor de IA. A extensão envia perguntas <strong>direto do seu navegador</strong> pro Google ou Anthropic — sem passar por servidores nossos.</p>
+      <p><strong>Pegar chave Gemini grátis (recomendado):</strong></p>
+      <ol>
+        <li>Vai em <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a></li>
+        <li>Faz login com sua conta Google</li>
+        <li>Clica em "Create API key" → "Create API key in new project"</li>
+        <li>Copia a chave (começa com <code>AIza...</code>)</li>
+        <li>No popup do Entendi., cola a chave em "Provedor: Gemini" e clica "Salvar"</li>
+      </ol>
+      <p>Limite gratuito do Google: <strong>1.500 perguntas por dia</strong>. Sem cartão de crédito.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>O painel detectou o processo errado, o que faço?</summary>
+    <div class="answer">
+      <p>Clica no botão <strong>"Processo errado?"</strong> no canto superior direito do painel. Abre uma lista com os 20 processos cobertos — você escolhe manualmente o correto.</p>
+      <p>Se for um processo que ainda não cobrimos, mande sugestão pra <a href="mailto:suporte@upaiva.dev?subject=Sugest%C3%A3o%20de%20processo">suporte@upaiva.dev</a> com a URL e o nome do serviço.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Quais portais e processos são cobertos?</summary>
+    <div class="answer">
+      <p><strong>5 portais cobertos</strong> com <strong>20 processos curados</strong>:</p>
+      <ul>
+        <li><strong>INSS (7):</strong> Auxílio-Doença, Aposentadoria por Idade, BPC/LOAS, Extrato CNIS, Recurso de Benefício, Pensão por Morte, Salário-Maternidade</li>
+        <li><strong>Receita Federal (5):</strong> IRPF, Restituição, Regularização CPF, Parcelamento, Certidão Negativa (CND)</li>
+        <li><strong>DETRAN (5):</strong> Renovar CNH, Primeira Habilitação, Recurso de Multa, Transferência de Veículo, Consultar Pontos</li>
+        <li><strong>Caixa / FGTS (3):</strong> Consultar Saldo, Sacar FGTS, Conta Vinculada</li>
+        <li><strong>gov.br:</strong> fallback genérico em qualquer página <code>.gov.br</code></li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>As informações exibidas são oficiais?</summary>
+    <div class="answer">
+      <p><strong>Não.</strong> A Entendi. <strong>não tem afiliação</strong> com INSS, Receita, DETRAN, Caixa ou qualquer órgão público. As informações foram curadas pela nossa equipe com base em fontes públicas (sites oficiais, leis, regulamentos).</p>
+      <p>Isso significa: o conteúdo é informativo, não jurídico. Pra confirmação definitiva, use sempre os canais oficiais:</p>
+      <ul>
+        <li><strong>INSS:</strong> 135 (gratuito) ou <a href="https://meu.inss.gov.br" target="_blank" rel="noopener">meu.inss.gov.br</a></li>
+        <li><strong>Receita:</strong> 146 ou <a href="https://www.gov.br/receitafederal" target="_blank" rel="noopener">gov.br/receitafederal</a></li>
+        <li><strong>DETRAN:</strong> site do DETRAN do seu estado</li>
+        <li><strong>Caixa/FGTS:</strong> 0800 726 0207 ou app FGTS</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>O painel abre sozinho e eu não quero. Como desligo?</summary>
+    <div class="answer">
+      <p>No popup do Entendi., na seção <strong>"Configurações"</strong>, desligue o toggle <strong>"Painel automático"</strong>.</p>
+      <p>Outras configurações disponíveis:</p>
+      <ul>
+        <li><strong>Tooltips em campos</strong> — mostra explicação ao passar o mouse em campos do formulário</li>
+        <li><strong>Traduzir erros do sistema</strong> — detecta mensagens de erro e mostra explicação</li>
+      </ul>
+      <p>O botão flutuante no canto inferior direito continua sempre disponível — é por ele que você abre o painel manualmente.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Tem atalho de teclado?</summary>
+    <div class="answer">
+      <p>Sim, três:</p>
+      <ul>
+        <li><kbd>Alt</kbd> + <kbd>E</kbd> — Abrir / fechar o painel em qualquer página coberta</li>
+        <li><kbd>Esc</kbd> — Fechar o painel quando estiver aberto</li>
+        <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> — Enviar a pergunta no campo de chat</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>A IA respondeu errado. E agora?</summary>
+    <div class="answer">
+      <p>IAs (Gemini e Claude) são modelos estatísticos — <strong>elas podem errar</strong>. Sempre confirme as informações importantes em fontes oficiais (135 do INSS, 146 da Receita, etc).</p>
+      <p>Se a resposta vier muito ruim, tente:</p>
+      <ol>
+        <li>Reformular a pergunta de forma mais específica</li>
+        <li>Trocar de provedor (Gemini ↔ Claude) — Claude geralmente tem qualidade melhor em português jurídico</li>
+        <li>Mandar print da resposta errada pra <a href="mailto:suporte@upaiva.dev?subject=IA%20respondeu%20errado">suporte@upaiva.dev</a> — ajustamos o prompt de sistema pra evitar erros recorrentes</li>
+      </ol>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Funciona em Edge, Brave, Opera?</summary>
+    <div class="answer">
+      <p>Sim, em qualquer navegador baseado em Chromium que suporte Chrome Extensions Manifest V3 — Edge, Brave, Opera, Vivaldi e outros. A loja oficial é a Chrome Web Store; em outros navegadores você instala a partir da loja deles (que normalmente sincroniza com a Chrome Web Store) ou via sideload manual.</p>
+      <p>Em Firefox <strong>ainda não funciona</strong> — Manifest V3 do Firefox tem algumas incompatibilidades com a versão Chrome. Talvez no futuro.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Sua chave de IA cobra de mim? Quanto vou pagar?</summary>
+    <div class="answer">
+      <p><strong>Gemini (Google):</strong> Grátis até 1.500 perguntas por dia. Não pede cartão de crédito. Pra usuário comum, nunca vai chegar perto desse limite.</p>
+      <p><strong>Claude (Anthropic):</strong> Pago, mas barato. Conta nova recebe ~$5 de crédito grátis. Cada pergunta custa ~$0,001 — com $5 de crédito você faz uns 5.000 perguntas.</p>
+      <p>A uPaiva <strong>não cobra nada</strong> da extensão. Os custos da IA são diretamente entre você e o provedor escolhido.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Como apago todos os meus dados?</summary>
+    <div class="answer">
+      <p>Como a extensão <strong>não coleta nada em servidor nosso</strong>, a forma mais simples é:</p>
+      <ol>
+        <li>Vai em <code>chrome://extensions</code></li>
+        <li>Clica em "Remover" no card do Entendi.</li>
+      </ol>
+      <p>Isso apaga <strong>tudo</strong> instantaneamente: histórico de portais, chave de API, configurações. Nada fica em nuvem porque não temos nuvem.</p>
+      <p>Se você quiser só remover a chave de API mas manter a extensão: abra o popup → na seção "Provedor de IA", clica em "Remover" abaixo da chave atual.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>A extensão é afiliada ao INSS, Receita, DETRAN ou Caixa?</summary>
+    <div class="answer">
+      <p><strong>Não.</strong> A Entendi. é um produto independente da uPaiva e <strong>não tem qualquer afiliação, endosso ou patrocínio</strong> de:</p>
+      <ul>
+        <li>INSS — Instituto Nacional do Seguro Social</li>
+        <li>Receita Federal do Brasil</li>
+        <li>DETRAN (de qualquer estado)</li>
+        <li>Caixa Econômica Federal</li>
+        <li>Governo Federal, estados ou municípios</li>
+      </ul>
+      <p>Os nomes dos órgãos são usados apenas para fins descritivos (identificar quais sites a extensão cobre). Todos os direitos pertencem aos respectivos titulares.</p>
+    </div>
+  </details>
+
+  <h2>Reportar bug</h2>
+  <p>Encontrou algo errado? Mande e-mail pra <a href="mailto:suporte@upaiva.dev?subject=Bug%20Report%20-%20Entendi.">suporte@upaiva.dev</a> com o modelo abaixo:</p>
+  <div class="email-template">Assunto: Bug Report — [breve descrição]
+
+Versão da extensão: (vai em chrome://extensions e copia)
+Navegador: (Chrome / Edge / Brave / outro) — versão
+Sistema operacional: (Windows / macOS / Linux)
+Provedor de IA configurado: (Gemini / Claude / não configurado)
+
+URL onde aconteceu: https://...
+
+O que você fez:
+1. ...
+2. ...
+
+O que esperava acontecer:
+...
+
+O que aconteceu na verdade:
+...
+
+Console de erros (F12 na aba do portal do governo, aba Console — copia tudo em vermelho):
+...
+
+(Anexe screenshots se possível)</div>
+
+  <h2>Sugerir processo novo</h2>
+  <p>Faltou um processo do governo? Mande sugestão:</p>
+  <div class="email-template">Assunto: Sugestão de processo — [nome curto]
+
+Portal: (INSS / Receita / DETRAN / Caixa / outro)
+URL onde aparece: https://...
+Nome do processo: (ex: "Auxílio-Acidente")
+O que dificulta hoje:
+...
+
+Por que vale a pena cobrir:
+...</div>
+  <p>Avaliamos cada sugestão. Processos com alta demanda entram nas próximas atualizações da extensão.</p>
+
+  <h2>Solicitar exclusão de dados (LGPD)</h2>
+  <p>Conforme a LGPD (Lei nº 13.709/2018), você pode solicitar a exclusão de todos os dados a qualquer momento.</p>
+  <p><strong>Como a extensão não coleta nada em servidor da uPaiva</strong>, a exclusão é instantânea e local: remova a extensão em <code>chrome://extensions</code>.</p>
+  <p>Se mesmo assim quiser registro formal de que solicitou exclusão (por compliance interna, por exemplo), envie e-mail:</p>
+  <div class="email-template">Assunto: Confirmação de exclusão de dados — Entendi.
+
+Solicito confirmação por escrito de que não há nenhum dado
+meu armazenado em servidor da uPaiva relacionado à extensão
+Entendi.
+
+Já removi a extensão localmente. Esta solicitação é apenas
+para registro/auditoria.
+
+(seu nome)
+(seu e-mail)</div>
+  <p>Respondemos por e-mail em até 7 dias úteis com confirmação por escrito.</p>
+
+  <h2>Outros canais</h2>
+  <ul>
+    <li><strong>Site oficial:</strong> <a href="https://upaiva.dev" target="_blank" rel="noopener">upaiva.dev</a></li>
+    <li><strong>Política de Privacidade:</strong> <a href="privacidade.html">privacidade.html</a></li>
+    <li><strong>Termos de Uso:</strong> <a href="termos.html">termos.html</a></li>
+  </ul>
+
+  <footer>
+    <div class="nav-links">
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+      <a href="https://upaiva.dev" target="_blank" rel="noopener">upaiva.dev</a>
+    </div>
+    <p style="margin-top: 16px;">© 2026 uPaiva. Todos os direitos reservados.</p>
+  </footer>
+
+</div>
+</body>
+</html>
