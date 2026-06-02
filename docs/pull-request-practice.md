@@ -14,3 +14,4 @@ Temporary public checklist for practicing a small pull request workflow.
 - [x] Checkpoint 10: complete another focused update.
 - [x] Checkpoint 11: maintain a clear audit trail.
 - [x] Checkpoint 12: retain a narrow diff.
+- [x] Checkpoint 13: merge another isolated change.
