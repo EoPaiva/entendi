@@ -9,3 +9,4 @@ Temporary public checklist for practicing a small pull request workflow.
 - [x] Checkpoint 05: document the pull request purpose.
 - [x] Checkpoint 06: keep the update reviewable.
 - [x] Checkpoint 07: confirm a clean merge.
+- [x] Checkpoint 08: keep the branch conflict-free.
