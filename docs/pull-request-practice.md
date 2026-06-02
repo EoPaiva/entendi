@@ -12,3 +12,4 @@ Temporary public checklist for practicing a small pull request workflow.
 - [x] Checkpoint 08: keep the branch conflict-free.
 - [x] Checkpoint 09: preserve a simple public log.
 - [x] Checkpoint 10: complete another focused update.
+- [x] Checkpoint 11: maintain a clear audit trail.
